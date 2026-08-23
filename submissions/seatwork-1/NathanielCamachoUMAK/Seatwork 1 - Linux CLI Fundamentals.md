@@ -1,7 +1,7 @@
 ## Course: ELEC3 Cloud Computing (CCSAD)  
 ## Student: Roberto Nathaniel Camacho III  
 
-![Screenshot](submissions/seatwork-1/NathanielCamachoUMAK/Seatwork1-proof.png)
+![Screenshot](Seatwork1-proof.png)
 
 ## Overview
 This directory contains the submission for Seatwork 1, which demonstrates fundamental Linux Command Line Interface (CLI) skills. The automated script (`seatwork.sh`) performs a sequence of 20 tasks covering file navigation, directory management, permissions formatting, and system process tracking.
