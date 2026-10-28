@@ -61,17 +61,17 @@ usable range = 10.66.28.4 to 10.66.29.254
 ## Task 3. Subnets from host counts
 
 | Subnet | Prefix | CIDR | Availability Zone | Usable |
-| --- | --- | --- | --- | --- |
-| private-a | <answer> | <answer> | <answer> | <answer> |
-| private-b | <answer> | <answer> | <answer> | <answer> |
-| public-a | <answer> | <answer> | <answer> | <answer> |
-| public-b | <answer> | <answer> | <answer> | <answer> |
+|---|---|---|---|---:|
+| private-a | /20 | 10.66.0.0/20 | ap-southeast-1a | 4,091 |
+| private-b | /20 | 10.66.16.0/20 | ap-southeast-1b | 4,091 |
+| public-a | /20 | 10.66.32.0/20 | ap-southeast-1a | 4,091 |
+| public-b | /20 | 10.66.48.0/20 | ap-southeast-1b | 4,091 |
 
 ## Task 4. Proposed subnets
 
 | # | Proposal | Valid or not valid | Why |
 | --- | --- | --- | --- |
-| P1 | <answer> | <answer> | <answer> |
-| P2 | <answer> | <answer> | <answer> |
-| P3 | <answer> | <answer> | <answer> |
-| P4 | <answer> | <answer> | <answer> |
+| P1 | 10.66.8.0/21 | Not valid | It overlaps private-a, 10.66.0.0/20, because 10.66.8.0/21 (10.66.8.0 to 10.66.15.255) sits inside it. |
+| P2 | 10.66.128.0/19 | Not valid | It is outside the VPC, which ends at 10.66.127.255. |
+| P3 | 10.66.96.0/20 | Valid | It is inside the VPC, starts on a step for a /20 (96 is a multiple of 16), is between /16 and /28, and overlaps none of our Task 3 subnets. |
+| P4 | 10.66.86.191/20 | Not valid | It does not start on a step for a /20. The valid block that holds the address is 10.66.80.0/20. |
